@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect } from 'react'
 import './calculator.css'
 
 const Calculator = ()=>{
@@ -8,7 +8,7 @@ const Calculator = ()=>{
       calculateResult()
     },[rows])
     const addRow = ()=>{
-        setRows([...rows, { sign: '+', value: 0, enabled: true }]);
+        setRows([...rows, { sign: '+', value: 0, enabled: true }])
     }
     const handleSign = (value, index)=>{
       const updatedRows = [...rows]
@@ -16,28 +16,28 @@ const Calculator = ()=>{
       setRows(updatedRows)
     }
     const inputHandler = (index,value)=>{
-      const updatedRows = [...rows];
-      value === '' ? updatedRows[index].value = null : updatedRows[index].value = parseFloat(value);
-      setRows(updatedRows);
+      const updatedRows = [...rows]
+      value === '' ? updatedRows[index].value = null : updatedRows[index].value = parseFloat(value)
+      setRows(updatedRows)
     }
     const handleEnableDisable = (index)=>{
-        const updatedRows = [...rows];
-        updatedRows[index].enabled = !updatedRows[index].enabled ;
-        setRows(updatedRows);
+        const updatedRows = [...rows]
+        updatedRows[index].enabled = !updatedRows[index].enabled 
+        setRows(updatedRows)
     }
     const deleteRow = (index)=>{
-        const updatedRows = [...rows];
+        const updatedRows = [...rows]
         updatedRows.splice(index,1)
-        setRows(updatedRows);
+        setRows(updatedRows)
     }
     const calculateResult = () => {
-      let result = 0;
+      let result = 0
       let enabledRows = rows.filter((row)=>{return row.enabled === true})
       enabledRows.forEach((row) => {
-        result += row.sign === '+' ? row.value : -row.value;
-      });
+        result += row.sign === '+' ? row.value : -row.value
+      })
       setCalculatedResult(result)
-    };
+    }
     return(
     <div className="calculator-container">
       <div className="calculator">
