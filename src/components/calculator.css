@@ -1,0 +1,33 @@
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333; 
+  }
+  
+  .calculator {
+    background: #fff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  select {
+    margin-right: 10px;
+  }
+  
+  input {
+    width: 60px;
+  }
+  
+  button {
+    margin: 0 10px;
+  }
+  
